@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/bin/vncserver :1 -geometry $VNC_GEOMETRY -depth 32
