@@ -75,6 +75,10 @@ Build image:
 BUILD_DOCKER_BUILDER=container ./build.sh
 ```
 
+## Security
+
+This image is **NOT SECURE** because VNC is not a secure protocol. **DO NOT** use this image over the Internet.
+
 ## LICENSE
 
 [MIT](https://github.com/ifrstr/docker-novnc/blob/master/LICENSE)

@@ -1,7 +1,0 @@
-#!/bin/sh
-
-echo -e "$VNC_PASSWD\n$VNC_PASSWD\n\n" | vncpasswd
-
-if [ -f /tmp/.X1-lock ]; then
-    rm -f /tmp/.X1-lock
-fi

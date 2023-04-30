@@ -1,0 +1,9 @@
+#!/bin/sh
+
+mkdir -p /home/root/.vnc
+
+echo $VNC_PASSWD | vncpasswd -f > /home/root/.vnc/passwd
+
+if [ -f /tmp/.X1-lock ]; then
+    rm -f /tmp/.X1-lock
+fi
