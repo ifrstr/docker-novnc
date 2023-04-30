@@ -1,6 +1,12 @@
-# docker-novnc
+# [docker-novnc](https://github.com/ifrstr/docker-novnc)
 
 noVNC in Docker.
+
+[GitHub](https://github.com/ifrstr/docker-novnc)
+|
+[GitHub Container Registry](https://github.com/orgs/ifrstr/packages/container/package/docker-novnc)
+|
+[Docker Hub](https://hub.docker.com/r/ifrstr/novnc)
 
 ## Usage
 
@@ -11,11 +17,7 @@ noVNC in Docker.
 ### Start using Docker
 
 ```sh
-docker run --rm -it \
-  -p 6080:80 \
-  -p 5901 \
-  -e VNC_PASSWD=password \
-  ifrstr/novnc
+docker run --rm -it -p 6080:80 -p 5901 -e VNC_PASSWD=password ifrstr/novnc
 ```
 
 ### Start using Docker Compose
@@ -40,6 +42,20 @@ Navigate to `http://localhost:6080` and login using `password`.
 vncviewer :1 # Connect to 127.0.0.1:5901
 ```
 
+## Troubleshooting
+
+Start bash with services:
+
+```sh
+docker run --rm -it -p 6080:80 -p 5901 -e VNC_PASSWD=password ifrstr/novnc /sbin/my_init -- bash -l
+```
+
+Start bash without services:
+
+```sh
+docker run --rm -it -p 6080:80 -p 5901 -e VNC_PASSWD=password ifrstr/novnc bash
+```
+
 ## Building
 
 Create a builder:
@@ -56,4 +72,4 @@ BUILD_DOCKER_BUILDER=container ./build.sh
 
 ## LICENSE
 
-MIT
+[MIT](https://github.com/ifrstr/docker-novnc/blob/master/LICENSE)
