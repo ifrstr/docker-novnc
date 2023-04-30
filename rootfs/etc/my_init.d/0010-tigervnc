@@ -1,8 +1,7 @@
 #!/bin/sh
 
 echo -e "$VNC_PASSWD\n$VNC_PASSWD\n\n" | vncpasswd
-echo 'openbox-session' > /etc/vnc/xstartup
 
-if [ -f /tmp/.X11-lock ]; then
-    rm -f /tmp/.X11-lock
+if [ -f /tmp/.X1-lock ]; then
+    rm -f /tmp/.X1-lock
 fi
