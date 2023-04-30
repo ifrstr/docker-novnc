@@ -19,7 +19,7 @@ RUN apt update && \
   sudo \
   wget \
   tigervnc-standalone-server tigervnc-tools tigervnc-xorg-extension \
-  xorg openbox \
+  xorg openbox python3-xdg \
   python3-numpy \
   nginx && \
   \
