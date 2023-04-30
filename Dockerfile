@@ -8,7 +8,10 @@ ENV VNC_GEOMETRY=1024x768 \
 
 COPY --chmod=0755 rootfs /
 
-RUN apt update && apt upgrade -y && \
+RUN apt update && \
+  \
+  # Upgrade OS
+  apt upgrade -y -o Dpkg::Options::="--force-confold" && \
   \
   # Install packages
   apt install -y \

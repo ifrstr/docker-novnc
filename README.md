@@ -8,6 +8,11 @@ noVNC in Docker.
 |
 [Docker Hub](https://hub.docker.com/r/ifrstr/novnc)
 
+## Features
+
+- **Easy to connect.** Open browser to connect to display, powered by [TigerVNC](https://tigervnc.org) + [noVNC](https://novnc.com).
+- **Lightweight**. Use [Openbox](http://openbox.org/) as WM, no DE.
+
 ## Usage
 
 ### Try online
