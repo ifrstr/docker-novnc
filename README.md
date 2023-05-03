@@ -11,8 +11,9 @@ noVNC in Docker.
 ## Features
 
 - **Easy to connect.** Open browser to connect to display, powered by [TigerVNC](https://tigervnc.org) + [noVNC](https://novnc.com).
-- **Lightweight**. Use [Openbox](http://openbox.org/) as WM, no DE.
-- Supports amd64, arm64, armv7 and riscv64.
+- **Lightweight.** Use [baseimage-docker](https://github.com/phusion/baseimage-docker) as base image.
+- **Minimal desktop environment.** Use [Openbox](http://openbox.org/) as WM, no SM/DE.
+- **Multi-Architecture.** Supports amd64, arm64, armv7 and riscv64.
 
 ## Usage
 
@@ -78,7 +79,7 @@ BUILD_DOCKER_BUILDER=container ./build.sh
 
 ## Security
 
-This image is **NOT SECURE** because VNC is not a secure protocol. **DO NOT** use this image over the Internet.
+This image is **NOT SECURE** because VNC is not a secure protocol. **DO NOT** use this image directly over the Internet. Wrap the traffic in tunnel.
 
 ## LICENSE
 
