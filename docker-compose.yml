@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   novnc:
-    image: ifrstr/novnc:0.0.1
+    image: ifrstr/novnc:0.0.2
 
     # Or build locally
     # build: .
