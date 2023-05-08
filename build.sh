@@ -1,5 +1,7 @@
 set -euxo pipefail
 
+BUILD_MODE=${1:-build}
+
 BUILD_AUTO_TAG=$(git rev-parse --abbrev-ref HEAD)-$(git rev-list --count HEAD)
 BUILD_TAG=${BUILD_TAG:-${BUILD_AUTO_TAG}}
 BUILD_DOCKER_BUILDER=${BUILD_DOCKER_BUILDER:-container}
@@ -8,7 +10,7 @@ BUILD_PLATFORM=linux/amd64,linux/arm64,linux/arm/v7,linux/riscv64
 
 echo "Building ifrstr/novnc:${BUILD_TAG} using builder: ${BUILD_DOCKER_BUILDER}\n\n"
 
-case $1 in
+case ${BUILD_MODE} in
   "push")
     if [ "$BUILD_TAG" = "$BUILD_AUTO_TAG" ]
     then
