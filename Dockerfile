@@ -10,9 +10,6 @@ COPY --chmod=0755 rootfs /
 
 RUN apt update && \
   \
-  # Upgrade OS
-  apt upgrade -y -o Dpkg::Options::="--force-confold" && \
-  \
   # Install packages
   apt install -y \
   ca-certificates \

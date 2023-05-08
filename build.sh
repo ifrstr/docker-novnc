@@ -1,5 +1,3 @@
-#!/bin/sh
-
 BUILD_AUTO_TAG=$(git rev-parse --abbrev-ref HEAD)-$(git rev-list --count HEAD)
 BUILD_TAG=${BUILD_TAG:-${BUILD_AUTO_TAG}}
 BUILD_DOCKER_BUILDER=${BUILD_DOCKER_BUILDER:-container}

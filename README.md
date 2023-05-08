@@ -4,15 +4,15 @@ noVNC in Docker.
 
 [GitHub](https://github.com/ifrstr/docker-novnc)
 |
-[GitHub Container Registry](https://github.com/orgs/ifrstr/packages/container/package/docker-novnc)
+[GitHub Container Registry](https://github.com/ifrstr/docker-novnc/pkgs/container/docker-novnc)
 |
 [Docker Hub](https://hub.docker.com/r/ifrstr/novnc)
 
 ## Features
 
 - **Easy to connect.** Open browser to connect to display, powered by [TigerVNC](https://tigervnc.org) + [noVNC](https://novnc.com).
-- **Lightweight.** Use [baseimage-docker](https://github.com/phusion/baseimage-docker) as base image.
-- **Minimal desktop environment.** Use [Openbox](http://openbox.org/) as WM, no SM/DE.
+- **Extensible.** Use [baseimage-docker](https://github.com/phusion/baseimage-docker) as base image, with built-in [runit](http://smarden.org/runit/).
+- **Lightweight.** Use [Openbox](http://openbox.org/) as WM, no SM/DE.
 - **Multi-Architecture.** Supports amd64, arm64, armv7 and riscv64.
 
 ## Usage
@@ -24,7 +24,7 @@ noVNC in Docker.
 ### Start using Docker
 
 ```sh
-docker run --rm -it -p 6080:80 -p 5901 -e VNC_PASSWD=password ifrstr/novnc
+docker run --rm -it --security-opt seccomp=unconfined -p 6080:80 -p 5901 -e VNC_PASSWD=password ifrstr/novnc
 ```
 
 ### Start using Docker Compose

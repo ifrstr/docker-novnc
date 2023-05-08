@@ -7,6 +7,9 @@ services:
     # Or build locally
     # build: .
 
+    security_opt:
+      - seccomp=unconfined
+
     deploy:
       restart_policy:
         condition: on-failure
